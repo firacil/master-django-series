@@ -5,16 +5,33 @@ from django.http import HttpResponse
 
 # home page
 def home(request):
-    #return HttpResponse("<h1>Home Page</h1>")
-    return render(request, 'pages/home.html')
+    
+    # adding some context variables to html dynamically
+    context = {
+        "page_name": "Home Page",
+        "title": "Home"
+    }
+    return render(request, 'pages/home.html', context)
 # about as page
 def about(request):
-    return render(request, 'pages/about.html')
+    context = {
+        "page_name": "About us Page",
+        "title": "About"
+    }
+    return render(request, 'pages/about.html', context)
 
 # contact as page
 def contact(request):
-    return render(request, 'pages/contact.html')
+    context = {
+        "page_name": "Contact us Page",
+        "title": "Contact"
+    }
+    return render(request, 'pages/contact.html', context)
 
 # services page
 def services(request):
-    return render(request, 'pages/services.html')
+    context = {
+        "page_name": "Services Page",
+        "title": "Services"
+    }
+    return render(request, 'pages/services.html', context)
