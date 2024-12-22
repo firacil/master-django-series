@@ -12,7 +12,7 @@
       <section class="blog-posts">
         <article class="blog-post">
         {% for post in list_of_post %}
-          <h2><a href="blog1.html">{{post.title|upper}}</a></h2>
+          <h2><a href="{{post.id}}">{{post.title|upper}}</a></h2>
           <p class="post-meta">Posted on {{post.date}} by {{post.author|upper}}</p>
         <p class="excerpt">
             {% if post.content|length > 50 %}
