@@ -30,24 +30,19 @@
       <!-- Blog Post List -->
       <section class="blog-posts">
         <article class="blog-post">
-          <h2><a href="blog1.html">The Importance of Time Management</a></h2>
-          <p class="post-meta">Posted on December 15, 2024 by Jane Doe</p>
-          <p class="excerpt">Learn how to manage your time effectively to boost productivity and reduce stress.</p>
+        {% for post in list_of_post %}
+          <h2><a href="blog1.html">{{post.title|upper}}</a></h2>
+          <p class="post-meta">Posted on {{post.date}} by {{post.author|upper}}</p>
+        <p class="excerpt">
+            {% if post.content|length > 50 %}
+                {{post.content|slice:":50"}}...
+            {% else %}
+                {{post.content}}
+            {% endif %}
+        </p>
+        {% endfor %}
         </article>
-
-        <article class="blog-post">
-          <h2><a href="blog2.html">5 Tips for Staying Motivated</a></h2>
-          <p class="post-meta">Posted on December 10, 2024 by John Smith</p>
-          <p class="excerpt">Discover actionable tips to keep yourself motivated, even on challenging days.</p>
-        </article>
-
-        <article class="blog-post">
-          <h2><a href="blog3.html">The Benefits of Journaling</a></h2>
-          <p class="post-meta">Posted on December 5, 2024 by Emily Brown</p>
-          <p class="excerpt">Explore how maintaining a journal can enhance your personal growth and mindfulness.</p>
-        </article>
-      </section>
-
+        
       <!-- Pagination -->
       <nav class="pagination">
         <a href="#" class="prev">&laquo; Previous</a>
