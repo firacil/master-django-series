@@ -1,27 +1,8 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Archive</title>
-  <link rel="stylesheet" href="{% static '/blog/css/styles.css' %}">
-</head>
-<body>
-  <!-- Header -->
-  <header class="navbar">
-    <div class="container">
-      <div class="logo">My Blog</div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+{% extends 'pages/base.html' %}
 
+{% block title %} {{title}} {% endblock title %}
+
+{% block main %}
   <!-- Main Content -->
   <main class="blog-archive">
     <div class="container">
@@ -50,12 +31,4 @@
       </nav>
     </div>
   </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2024 My Blog. All Rights Reserved.</p>
-    </div>
-  </footer>
-</body>
-</html>
+{% endblock main %}
