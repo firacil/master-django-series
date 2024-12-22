@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Archive</title>
+  <link rel="stylesheet" href="{% static '/blog/css/styles.css' %}">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">My Blog</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="blog-archive">
+    <div class="container">
+      <h1>Blog Archive</h1>
+
+      <!-- Blog Post List -->
+      <section class="blog-posts">
+        <article class="blog-post">
+          <h2><a href="blog1.html">The Importance of Time Management</a></h2>
+          <p class="post-meta">Posted on December 15, 2024 by Jane Doe</p>
+          <p class="excerpt">Learn how to manage your time effectively to boost productivity and reduce stress.</p>
+        </article>
+
+        <article class="blog-post">
+          <h2><a href="blog2.html">5 Tips for Staying Motivated</a></h2>
+          <p class="post-meta">Posted on December 10, 2024 by John Smith</p>
+          <p class="excerpt">Discover actionable tips to keep yourself motivated, even on challenging days.</p>
+        </article>
+
+        <article class="blog-post">
+          <h2><a href="blog3.html">The Benefits of Journaling</a></h2>
+          <p class="post-meta">Posted on December 5, 2024 by Emily Brown</p>
+          <p class="excerpt">Explore how maintaining a journal can enhance your personal growth and mindfulness.</p>
+        </article>
+      </section>
+
+      <!-- Pagination -->
+      <nav class="pagination">
+        <a href="#" class="prev">&laquo; Previous</a>
+        <a href="#" class="next">Next &raquo;</a>
+      </nav>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 My Blog. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

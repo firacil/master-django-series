@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post Title</title>
+  <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">My Blog</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="blog-post">
+    <div class="container">
+      <article>
+        <h1>The Importance of Time Management</h1>
+        <p class="post-meta">Posted on December 15, 2024 by Jane Doe</p>
+
+        <div class="post-content">
+          <p>Time management is a crucial skill that can greatly enhance productivity and reduce stress. In today’s fast-paced world, finding ways to effectively allocate your time can make a significant difference in achieving your goals.</p>
+
+          <h2>Why Time Management Matters</h2>
+          <p>Effective time management allows you to prioritize tasks, minimize distractions, and focus on what truly matters. It can lead to better work-life balance and higher levels of satisfaction.</p>
+
+          <h2>Tips for Better Time Management</h2>
+          <ul>
+            <li>Set clear goals and break them into manageable tasks.</li>
+            <li>Use tools like calendars and to-do lists to stay organized.</li>
+            <li>Eliminate unnecessary distractions to maintain focus.</li>
+            <li>Review your progress regularly and adjust your plans accordingly.</li>
+          </ul>
+
+          <p>By implementing these strategies, you can make the most of your time and achieve your objectives with greater ease.</p>
+        </div>
+      </article>
+
+      <!-- Comments Section -->
+      <section class="comments">
+        <h2>Comments</h2>
+        <div class="comment">
+          <p><strong>John Smith:</strong> Great tips! I found the point about eliminating distractions particularly useful.</p>
+        </div>
+        <div class="comment">
+          <p><strong>Emily Brown:</strong> Thanks for sharing! Time management has always been a challenge for me, but these ideas are inspiring.</p>
+        </div>
+
+        <!-- Add a Comment -->
+        <form class="comment-form" action="#" method="post">
+          <h3>Add a Comment</h3>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="comment">Comment:</label>
+          <textarea id="comment" name="comment" rows="4" required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 My Blog. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
